@@ -2,7 +2,7 @@
   "name": "ramnickfrancisramos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rfpramos.github.io/ramnickfrancisramos",
+  "homepage": "https://rfpramos.github.io/ramos_resume_2026",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -29,6 +29,7 @@
     "eject": "react-scripts eject --openssl-legacy-provider",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
