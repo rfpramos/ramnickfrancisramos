@@ -12,6 +12,9 @@ import Labs from './components/Labs/Labs'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import Education from './components/Education/Education'
+import Experience from './components/Experience/Experience'
+import Affiliations from './components/Affiliations/Affiliations'
 
 
 const App = () => {
@@ -23,6 +26,9 @@ const App = () => {
 
       <main>
         <About />
+        <Education />
+        <Experience />
+        <Affiliations />
         <Labs />
         <CybersecuritySkills />
 

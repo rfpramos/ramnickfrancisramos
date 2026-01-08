@@ -4,12 +4,14 @@
  * 
  */
 
+import { duration } from "@material-ui/core"
+
 
 
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://ramnickfrancisramos.dev',
-  title: 'ramnickfrancisramos.dev.',
+  title: 'ramnickfrancisramos.dev',
 }
 
 const about = {
@@ -229,6 +231,16 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
+    name: 'BATSeq',
+    description:
+      'Developed a web application that implements bioinformatics tool such as Basic Local Alignment Search Tool using MERN Stack for the nucleotide sequences under Center for Cave Ecosystems Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave Ecosystems Research.',
+    stack: ['MySQL', 'ExpressJS', 'ReactJS', 'NodeJS'],
+    sourceCode: 'https://github.com/rfpramos/batseq_cmsc190_final',
+    pdf: `${process.env.PUBLIC_URL}/assets/batseq_paper.pdf`,
+    // livePreview: 'https://github.com',
+    image: 'bat_seq.png',
+  },
+  {
     
     // name: 'Project 1',
     // description:
@@ -327,11 +339,107 @@ const skills = [
   'Figma',
 ]
 
-  
+
+const education = [
+  {
+    institution: 'University of the Philippines Los Baños',
+    degree: 'Bachelor of Science in Computer Science',
+    graduationDate: 'December 2025',
+    gwa: '1.4431',
+    details:
+      'Took elective courses in Information Security and Bionformatics.',
+    awards: [
+      'Honorific Standing: Magna cum Laude',
+      'University/College Scholar',
+      'Inductee, Phi Kappa Phi Honor Society',
+      'Recipient, Department of Science and Technology (DOST) Merit Scholarship',
+    ],
+    relevantCourses: [
+      'CMSC 191. Cybersecurity',
+      'CMSC 131. Introduction to Computer Organization and Machine-Level Programming',
+      'CMSC 125. Operating Systems',
+      'CMSC 100. Web Programming',
+      'CMSC 128. Introduction to Software Engineering',
+      'CMSC 123. Data Structures and Algorithms',
+      'CMSC 127. File Processing and Database Systems'
+    ],
+  },
+  {
+    institution: 'Philippine Science High School - CALABARZON Region Campus',
+    degree: 'High School Diploma',
+    graduationDate: 'May 2021',
+    details:
+      'Specialized in Science, Technology, Engineering, and Mathematics (STEM) strand with electives on Physics, Computer Science, and Engineering.',
+    gwa: '1.42',
+    awards: [
+      'Graduated with High Honors',
+    ]
+    }
+]
+
+
+/**
+ * Relevant Experience
+
+UPLB Computational Interdisciplinary Research Labs (CINTERLABS) Los Banos, Laguna
+Software Development Intern June 2024 - August 2024
+● Develops web application using MERN Stack for the projects under Center for Cave Ecosystems
+Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave
+Ecosystems Research
+KUMU, INC. Remote
+Software Quality Assurance Intern August 2023
+● Utilized Jira to report bugs and issues in a mobile live-streaming application
+● Worked with other technology interns to ensure the functionality of new features
+● Experienced leading intern team on smoke testing for product deployment
+
+Leadership & Activities
+
+ALLIANCE OF COMPUTER SCIENCE STUDENTS - UPLB Los Baños, Laguna
+Developer for Logistics and Public Affairs December 2021 - Present
+● Helps in managing partnerships with external organizations and partner university organizations
+● Aids in the management of the organization’s inventory
+UPLB ROTC - CORPS OF CADETS Los Baños, Laguna
+Non-Commissioned Cadet Officer November 2021 - May 2022
+● Held a leadership position as the Acting G6, Communications, and Information Technology Officer
+● Led the team managing the official social media page of the UPLB ROTC
+ */
+const affiliations = [
+  {
+    institution: 'Alliance of Computer Science Students (ACSS) - UPLB',
+    position: 'Logistics and Public Relations Officer',
+    duration: 'December 2021 - Present',
+    details:
+      'Helps in managing partnerships with external organizations and partner university organizations. Aids in the management of the organization’s inventory.',
+  },
+  {
+    institution: 'UPLB ROTC - Corps of Cadets',
+    position: 'Non-Commissioned Cadet Officer',
+    duration: 'November 2021 - May 2022',
+    details:
+      'Held a leadership position as the Acting G6, Communications, and Information Technology Officer. Led the team managing the official social media page of the UPLB ROTC.',
+  },
+]
+
+const experiences = [
+  {
+    institution: 'UPLB Computational Interdisciplinary Research Labs (CINTERLABS)',
+    position: 'Software Development Intern',
+    duration: 'June 2024 - August 2024',
+    details:
+      'Developed a web application using MERN Stack for the projects under Center for Cave Ecosystems Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave Ecosystems Research.',
+  },
+  {
+    institution: 'KUMU, INC.',
+    position: 'Software Quality Assurance Intern',
+    duration: 'August 2023',
+    details:
+      'Utilized Jira to report bugs and issues in a mobile live-streaming application. Worked with other technology interns to ensure the functionality of new features. Experienced leading intern team on smoke testing for product deployment.',
+  },
+] 
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
   email: 'ramnickfrancisamos@gmail.com',
 }
 
-export { header, about, labs, projects, cybersecuritySkills, skills, contact }
+export { header, about, labs, projects, cybersecuritySkills, skills, contact, education, affiliations, experiences }

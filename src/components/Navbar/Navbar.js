@@ -4,7 +4,15 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, contact } from '../../portfolio'
+import {
+  projects,
+  skills,
+  contact,
+  cybersecuritySkills,
+  labs,
+  education,
+  experiences,
+} from '../../portfolio'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -14,48 +22,70 @@ const Navbar = () => {
   const toggleNavList = () => setShowNavList(!showNavList)
 
   return (
-    <nav className='center nav'>
+    <nav className='nav'>
+      {/* ---------- Terminal window controls + title ---------- */}
+      <div className='nav__controls'>
+        <span className='nav__dot nav__dot--close' />
+        <span className='nav__dot nav__dot--min' />
+        <span className='nav__dot nav__dot--max' />
+        <span className='nav__title'>ramnickfrancisramos@dev:~</span>
+      </div>
+
+      {/* ---------- Nav links ---------- */}
       <ul
-        style={{ display: showNavList ? 'flex' : null }}
         className='nav__list'
+        style={{ display: showNavList ? 'flex' : undefined }}
       >
-        {projects.length ? (
+        {education.length > 0 && (
           <li className='nav__list-item'>
-            <a
-              href='#projects'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Projects
+            <a href='#education' onClick={toggleNavList} className='link link--nav'>
+              Education
             </a>
           </li>
-        ) : null}
+        )}
 
-        {skills.length ? (
+        {experiences.length > 0 && (
           <li className='nav__list-item'>
-            <a
-              href='#skills'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <a href='#experience' onClick={toggleNavList} className='link link--nav'>
+              Work Experiences
+            </a>
+          </li>
+        )}
+
+        {labs.length > 0 && (
+          <li className='nav__list-item'>
+            <a href='#labs' onClick={toggleNavList} className='link link--nav'>
+              Info. Sec.
+            </a>
+          </li>
+        )}
+
+        {projects.length > 0 && (
+          <li className='nav__list-item'>
+            <a href='#projects' onClick={toggleNavList} className='link link--nav'>
+              Software Dev.
+            </a>
+          </li>
+        )}
+
+        {skills.length > 0 && (
+          <li className='nav__list-item'>
+            <a href='#skills' onClick={toggleNavList} className='link link--nav'>
               Skills
             </a>
           </li>
-        ) : null}
+        )}
 
-        {contact.email ? (
+        {contact.email && (
           <li className='nav__list-item'>
-            <a
-              href='#contact'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <a href='#contact' onClick={toggleNavList} className='link link--nav'>
               Contact
             </a>
           </li>
-        ) : null}
+        )}
       </ul>
 
+      {/* ---------- Theme toggle ---------- */}
       <button
         type='button'
         onClick={toggleTheme}
@@ -65,6 +95,7 @@ const Navbar = () => {
         {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
       </button>
 
+      {/* ---------- Mobile hamburger ---------- */}
       <button
         type='button'
         onClick={toggleNavList}

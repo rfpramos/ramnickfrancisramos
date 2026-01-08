@@ -1,0 +1,36 @@
+.experience {
+  padding: 2em;
+  margin: 2em auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.experience__item {
+  padding: 2em;
+  margin: 1.5em 0;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.experience__item:hover {
+  transform: translateY(-7px);
+}
+
+.experience__institution {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.experience__position {
+  margin: 0.5em 0 0 0;
+  font-weight: 500;
+  color: var(--clr-fg-alt);
+}
+
+.experience__details {
+  margin: 0.8em 0;
+  line-height: 1.6;
+}

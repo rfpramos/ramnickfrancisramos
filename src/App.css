@@ -11,17 +11,25 @@
   font-size: 14px;
 }
 
+
 /* ---------- THEME TOKENS ---------- */
 
 .dark {
-  --clr-bg: #0d0f12;        /* terminal black */
-  --clr-bg-alt: #15181d;    /* panel background */
-  --clr-fg: #c9d1d9;        /* main text */
-  --clr-fg-alt: #8b949e;    /* comments / muted */
-  --clr-primary: #3fb950;   /* terminal green */
-  --clr-border: #30363d;
+  /* Backgrounds */
+  --clr-bg: #300a24;        /* Ubuntu terminal purple */
+  --clr-bg-alt: #3b0f2e;    /* slightly lighter panel purple */
+
+  /* Text */
+  --clr-fg: #e6f1d8;        /* soft readable green-tinted text */
+  --clr-fg-alt: #b9cf9a;    /* muted comments / secondary text */
+
+  /* Accents */
+  --clr-primary: #76ad30;   /* terminal green */
+  --clr-border: #5a1a42;    /* purple border */
+
   --shadow: none;
 }
+
 
 /* Optional light theme if you still want it */
 .light {
@@ -55,6 +63,7 @@ main {
   margin-bottom: 1em;
   text-transform: lowercase;
   color: var(--clr-primary);
+  font-size: 1.5rem;
 }
 
 .section__title::before {
@@ -67,6 +76,7 @@ main {
 .link {
   color: var(--clr-primary);
   position: relative;
+  word-break: break-word;
 }
 
 .link:hover {
@@ -136,8 +146,55 @@ main {
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
+  .app {
+    font-size: 12px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 0.5em;
+  }
+
+  .section {
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 4px;
+  }
+
+  .section__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8em;
+  }
+
+  .btn {
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+  }
+
+  .btn--outline,
+  .btn--plain {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .app {
+    font-size: 13px;
+  }
+
+  main {
+    width: 90%;
+  }
+
   .section {
     margin-top: 3em;
-    padding: 1.2em;
+    padding: 1.3em;
+  }
+
+  .section__title {
+    font-size: 1.4rem;
   }
 }

@@ -1,3 +1,38 @@
 .contact {
   flex-direction: column;
 }
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+  color: var(--clr-fg);
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact__form .btn {
+  align-self: flex-start;
+}

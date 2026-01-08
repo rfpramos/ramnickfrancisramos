@@ -1,7 +1,138 @@
+/**
+ * Labs Section CSS
+ * Fully responsive, terminal-inspired, collapsible
+ */
+
+.labs {
+  margin-top: 3em;
+  padding: 1em;
+  background-color: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Section title */
+.labs .section__title {
+  text-align: left;
+  text-transform: lowercase;
+  color: var(--clr-primary);
+  margin-bottom: 1em;
+}
+
+.labs .section__title::before {
+  content: '$ ';
+  color: var(--clr-fg-alt);
+}
+
+/* SEED logo */
+.labs__seed-logo {
+  width: clamp(100px, 40vw, 300px); /* min 100px, scales up to 300px */
+  height: auto;
+  display: block;
+  margin: 0 auto 1em auto;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Shrink logo when collapsed */
+.labs.collapsed .labs__seed-logo {
+  width: clamp(50px, 20vw, 120px);
+}
+
+/* Grid of labs */
 .labs__grid {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
+  gap: 2em;
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-primary) var(--clr-bg-alt);
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Collapse grid height when section is collapsed */
+.labs.collapsed .labs__grid {
+  max-height: 300px;
+}
+
+/* Toggle button */
+.labs__toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.labs__caret {
+  color: var(--clr-fg-alt);
+  font-size: 0.9em;
+}
+
+/* PDF iframe inside lab container */
+.lab__pdf {
+  width: 100%;
+  height: 200px;
+  border: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-primary) var(--clr-bg-alt);
+}
+
+/* Scrollbar for Webkit browsers */
+.lab__pdf::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.lab__pdf::-webkit-scrollbar-track {
+  background: var(--clr-bg-alt);
+}
+
+.lab__pdf::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary);
+  border-radius: 3px;
+}
+
+/* Terminal style for lab items */
+.lab__terminal {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--clr-fg);
+}
+
+.lab__terminal-prompt {
+  color: var(--clr-primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .labs__grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    max-height: none;
+  }
+
+  .labs__seed-logo {
+    width: clamp(80px, 50vw, 150px);
+  }
+
+  .labs__toggle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 601px) and (max-width: 900px) {
+  .labs__grid {
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1.5em;
+    max-height: 500px;
+  }
+
+  .labs__seed-logo {
+    width: clamp(100px, 30vw, 200px);
+  }
 }

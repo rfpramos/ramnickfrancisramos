@@ -1,0 +1,88 @@
+.education {
+  padding: 2em;
+  margin: 2em auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.education__item {
+  padding: 2em;
+  margin: 1.5em 0;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.education__item:hover {
+  transform: translateY(-7px);
+}
+
+.education__institution {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.education__degree {
+  margin: 0.5em 0 0 0;
+  font-weight: 500;
+  color: var(--clr-fg-alt);
+}
+
+.education__gwa {
+  margin: 0.3em 0;
+  font-size: 0.95rem;
+  color: var(--clr-fg-alt);
+}
+
+.education__details {
+  margin: 0.8em 0;
+  line-height: 1.6;
+}
+
+.education__awards {
+  margin-top: 1.2em;
+  padding: 1em;
+  background-color: var(--clr-bg-alt);
+  border-left: 3px solid var(--clr-primary);
+  border-radius: 4px;
+}
+
+.education__awards h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 0.95rem;
+}
+
+.education__awards ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.education__awards li {
+  margin: 0.3em 0;
+  font-size: 0.9rem;
+}
+
+.education__courses {
+  margin-top: 1.2em;
+  padding: 1em;
+  background-color: var(--clr-bg-alt);
+  border-left: 3px solid var(--clr-primary);
+  border-radius: 4px;
+}
+
+.education__courses h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 0.95rem;
+}
+
+.education__courses ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.education__courses li {
+  margin: 0.3em 0;
+  font-size: 0.9rem;
+}

@@ -2,9 +2,9 @@ import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
 import YouTubeIcon from '@material-ui/icons/YouTube'
+import PDFIcon from '@material-ui/icons/PictureAsPdf'
 
-
-
+import { SiFigma } from 'react-icons/si'
 
 
 import './ProjectContainer.css'
@@ -56,7 +56,17 @@ const ProjectContainer = ({ project }) => (
       </a>
     )}
 
-    {project.youtube && (
+    {project.pdf && (
+      <a
+        href={project.pdf}
+        aria-label='pdf link'
+        className='link link--icon'
+      >
+       <PDFIcon />
+      </a>
+    )}
+
+    {project.ytLink && (
       <a
         href={project.youtube}
         aria-label='youtube link'
@@ -66,15 +76,14 @@ const ProjectContainer = ({ project }) => (
       </a>
     ) }
 
-    {project.figma && (
-      <a
-        href={project.figma}
-        aria-label='figma link'
-        className='link link--icon'
-      >
-   
-      <LaunchIcon/>
+    {project.figmaLink && (
+
+  
+
+      <a href="https://figma.com" aria-label="figma" className="link link--icon">
+        <SiFigma />
       </a>
+
     ) }
   </div>
 )
