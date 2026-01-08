@@ -28,7 +28,8 @@ const Navbar = () => {
         <span className='nav__dot nav__dot--close' />
         <span className='nav__dot nav__dot--min' />
         <span className='nav__dot nav__dot--max' />
-        <span className='nav__title'>ramnickfrancisramos@dev:~</span>
+        <a href="#top" onClick={toggleNavList} className='link link--nav'>
+        <span className='nav__title'>ramnickfrancisramos@dev:~</span></a>
       </div>
 
       {/* ---------- Nav links ---------- */}

@@ -7,12 +7,14 @@ const Contact = () => {
   return (
     <section className='section contact center' id='contact'>
       <h2 className='section__title'>Contact</h2>
-      <p>Send an email through this form or reach me via ramnickfrancisramos@gmail.com </p>
+      <p>Send an email through this form or reach me via the following contact details:</p>
+      <p>Email: <a href={`mailto:${contact.email}`} className='link'>{contact.email}</a></p>
+      <p>Phone: <a href={`tel:${contact.phone}`} className='link'>{contact.phone}</a></p>
       <br />
       
       <form
 
-        action="https://formspree.io/f/xyzyzyzyz"
+        action="https://formspree.io/f/mgovgrrd"
         method="POST"
         className='contact__form'
       >

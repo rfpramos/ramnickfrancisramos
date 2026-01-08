@@ -21,8 +21,8 @@ const about = {
   picture: 'images/smiling_shot.png',
 
   description:
-    'A fresh graduate from the Insitute of Computer Science at the University of the Philippines Los Baños. I am passionate about information security and software development. I am eager to learn and grow in the tech industry, and I am excited to contribute my skills and knowledge to a dynamic team.',
-  resume: 'https://drive.google.com/file/d/1qARl2bjITN-VbOmenxFFLErwUbEcZ8CA/view?usp=sharing',
+    'A graduate from the Insitute of Computer Science at the University of the Philippines Los Baños. I am an aspiring Information Security Analyst with leveraged experience in Software Development. With a keen interest in creation of cybersecurity reports and analysis of software qualities, I aim to contribute to a cybersecurity team that give importance to both security and ease of usability. ',
+  resume: `${process.env.PUBLIC_URL}/assets/resume.pdf`,
   social: {
     linkedin: 'https://www.linkedin.com/in/rfpramos/',
     github: 'https://github.com/rfpramos',
@@ -440,6 +440,8 @@ const experiences = [
 const contact = {
   // email is optional - if left empty Contact section won't show up
   email: 'ramnickfrancisamos@gmail.com',
+  phone: '+63 960 277 1720',
+
 }
 
 export { header, about, labs, projects, cybersecuritySkills, skills, contact, education, affiliations, experiences }

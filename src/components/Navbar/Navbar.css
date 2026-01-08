@@ -1,49 +1,48 @@
+/* ---------- Navbar Container ---------- */
 .nav {
- 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  background-color: var(--clr-bg-alt);
-  border-bottom: 1px solid var(--clr-border);
-
+  z-index: 999;
+  background-color: #3c3c3c; /* classic terminal grey */
+  border-bottom: 1px solid #2a2a2a;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8em 1em;
-  margin: 0;
+  padding: 0.6em 1em;
   font-family: 'JetBrains Mono', monospace;
+  color: #c9d1d9; /* lighter text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Terminal controls */
+/* ---------- Terminal Window Controls ---------- */
 .nav__controls {
   display: flex;
   align-items: center;
   gap: 0.4em;
-  margin: 0;
-  padding: 0;
 }
 
 .nav__dot {
-  width: 0.7em;
-  height: 0.7em;
+  width: 0.8em;
+  height: 0.8em;
   border-radius: 50%;
   display: inline-block;
 }
 
 .nav__dot--close { background: #ff5f56; }
-.nav__dot--min { background: #ffbd2e; }
-.nav__dot--max { background: #27c93f; }
+.nav__dot--min   { background: #ffbd2e; }
+.nav__dot--max   { background: #27c93f; }
 
 .nav__title {
-  color: var(--clr-fg-alt);
+  color: #c9d1d9;
   font-size: 0.75rem;
   margin-left: 0.6em;
   margin-right: 2em;
+  letter-spacing: 0.5px;
 }
 
-/* Nav commands */
+/* ---------- Nav Links (commands) ---------- */
 .nav__list {
   display: flex;
   gap: 1.2em;
@@ -52,42 +51,44 @@
   list-style: none;
 }
 
-.nav__list-item {
-  margin: 0;
-  padding: 0;
-}
-
 .nav__list-item a {
-  color: var(--clr-primary);
+  color: #76ad30; /* terminal green */
   font-size: 0.75rem;
   text-transform: lowercase;
+  position: relative;
+}
+
+.nav__list-item a::before {
+  content: '$ '; /* terminal prompt before each link */
+  color: #c9d1d9;
 }
 
 .nav__list-item a::after {
-  content: ';';
-  color: var(--clr-fg-alt);
+  content: ';'; /* semicolon like command */
+  color: #c9d1d9;
 }
 
 .nav__list-item a:hover {
   text-decoration: underline;
 }
 
-/* Theme toggle */
+/* ---------- Theme Toggle ---------- */
 .nav__theme {
   font-size: 0.75rem;
-  color: var(--clr-primary);
+  color: #76ad30; /* same terminal green */
   margin-left: auto;
 }
 
-/* Hamburger - hidden by default */
+/* ---------- Hamburger Menu (Mobile) ---------- */
 .nav__hamburger {
   display: none;
+  color: #76ad30;
 }
 
-/* Mobile responsive */
+/* ---------- Responsive Mobile ---------- */
 @media (max-width: 600px) {
   .nav__controls .nav__title {
-    display: none;
+    display: none; /* hide terminal title on mobile */
   }
 
   .nav__list {
@@ -97,12 +98,18 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    background-color: var(--clr-bg);
+    background-color: #23283e; /* dark panel for mobile menu */
     z-index: 2;
+    gap: 2em;
   }
 
   .nav__hamburger {
     display: flex;
     z-index: 3;
+  }
+}
+@media (max-width: 600px) {
+  .nav__list--active {
+    display: flex;
   }
 }
