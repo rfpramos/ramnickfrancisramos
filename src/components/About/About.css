@@ -8,11 +8,11 @@
 }
 
 .about__role {
-  margin-top: 1.2em;
+  margin-top: 1em;
 }
 
 .about__desc {
-  font-size: 1rem;
+  font-size: 0.75rem;
   max-width: 600px;
 }
 
@@ -44,14 +44,24 @@
 }
 
 .about__picture {
-  width: 180px;
-  height: 180px;
-  border-radius: 70%;   /* round profile */
+  width: 380px;
+  height: 380px;
+  /* border-radius: 70%;   round profile */
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.15); */
 }
 
 .about__intro {
   display: flex;
   flex-direction: column;
+}
+
+.about__terminal {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+  font-size: xx-large;
+  color: var(--clr-fg);
+}
+
+.about__terminal-prompt {
+  color: var(--clr-primary);
 }

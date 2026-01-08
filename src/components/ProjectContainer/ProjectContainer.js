@@ -1,6 +1,12 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+
+
+
+
+
 import './ProjectContainer.css'
 
 const ProjectContainer = ({ project }) => (
@@ -49,6 +55,27 @@ const ProjectContainer = ({ project }) => (
         <LaunchIcon />
       </a>
     )}
+
+    {project.youtube && (
+      <a
+        href={project.youtube}
+        aria-label='youtube link'
+        className='link link--icon'
+      >
+        <YouTubeIcon />
+      </a>
+    ) }
+
+    {project.figma && (
+      <a
+        href={project.figma}
+        aria-label='figma link'
+        className='link link--icon'
+      >
+   
+      <LaunchIcon/>
+      </a>
+    ) }
   </div>
 )
 

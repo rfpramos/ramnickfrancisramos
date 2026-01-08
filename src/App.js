@@ -5,9 +5,14 @@ import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+
+import CybersecuritySkills from './components/CybersecuritySkills/CybersecuritySkills'
+import Labs from './components/Labs/Labs'
+
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import './App.css'
+
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
@@ -18,6 +23,9 @@ const App = () => {
 
       <main>
         <About />
+        <Labs />
+        <CybersecuritySkills />
+
         <Projects />
         <Skills />
         <Contact />
