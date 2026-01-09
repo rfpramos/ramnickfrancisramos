@@ -22,7 +22,7 @@ const about = {
 
   description:
     'A graduate from the Insitute of Computer Science at the University of the Philippines Los Baños. I am an aspiring Information Security Analyst with leveraged experience in Software Development. With a keen interest in creation of cybersecurity reports and analysis of software qualities, I aim to contribute to a cybersecurity team that give importance to both security and ease of usability. ',
-  resume: `${process.env.PUBLIC_URL}/assets/resume.pdf`,
+  resume: `${process.env.PUBLIC_URL}/resume.pdf`,
   social: {
     linkedin: 'https://www.linkedin.com/in/rfpramos/',
     github: 'https://github.com/rfpramos',
