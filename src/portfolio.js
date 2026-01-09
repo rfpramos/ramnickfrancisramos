@@ -18,7 +18,7 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Ramnick Francis Ramos',
   role: 'BS Computer Science Fresh Graduate',
-  picture: 'images/smiling_shot.png',
+  picture: 'images/linux_style_headshot.png',
 
   description:
     'A graduate from the Insitute of Computer Science at the University of the Philippines Los Baños. I am an aspiring Information Security Analyst with leveraged experience in Software Development. With a keen interest in creation of cybersecurity reports and analysis of software qualities, I aim to contribute to a cybersecurity team that give importance to both security and ease of usability. ',
