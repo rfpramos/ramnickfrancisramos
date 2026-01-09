@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ramos_resume_2026/static/css/main.88ba1fad.css",
-    "main.js": "/ramos_resume_2026/static/js/main.e6d37a04.js",
-    "index.html": "/ramos_resume_2026/index.html",
-    "main.88ba1fad.css.map": "/ramos_resume_2026/static/css/main.88ba1fad.css.map",
-    "main.e6d37a04.js.map": "/ramos_resume_2026/static/js/main.e6d37a04.js.map"
+    "main.css": "/static/css/main.88ba1fad.css",
+    "main.js": "/static/js/main.6373ba57.js",
+    "index.html": "/index.html",
+    "main.88ba1fad.css.map": "/static/css/main.88ba1fad.css.map",
+    "main.6373ba57.js.map": "/static/js/main.6373ba57.js.map"
   },
   "entrypoints": [
     "static/css/main.88ba1fad.css",
-    "static/js/main.e6d37a04.js"
+    "static/js/main.6373ba57.js"
   ]
 }
