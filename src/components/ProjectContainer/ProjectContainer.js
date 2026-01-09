@@ -72,7 +72,7 @@ const ProjectContainer = ({ project }) => (
 
     {project.ytLink && (
       <a
-        href={project.youtube}
+        href={project.ytLink}
         aria-label='youtube link'
         className='link link--icon'
       >
@@ -82,9 +82,8 @@ const ProjectContainer = ({ project }) => (
 
     {project.figmaLink && (
 
-  
 
-      <a href="https://figma.com" aria-label="figma" className="link link--icon">
+      <a href={project.figmaLink} aria-label="figma" className="link link--icon">
         <SiFigma />
       </a>
 
