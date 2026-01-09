@@ -24,6 +24,10 @@ const ProjectContainer = ({ project }) => (
     )}
 
     <h3>{project.name}</h3>
+    
+    {project.type && (
+      <p className='project__type'>{project.type}</p>
+    )}
 
     <p className='project__description'>{project.description}</p>
     {project.stack && (
@@ -36,9 +40,6 @@ const ProjectContainer = ({ project }) => (
       </ul>
     )}
 
-    {project.type && (
-      <p className='project__type'>{project.type}</p>
-    )}
 
     {project.sourceCode && (
       <a

@@ -33,8 +33,19 @@
 }
 
 .project__type {
+  display: inline-block;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: medium;
   color: var(--clr-primary);
   margin-top: 0.5em;
+  padding: 0.5em 1em;
+  border: 2px solid var(--clr-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.project__type:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
 }
