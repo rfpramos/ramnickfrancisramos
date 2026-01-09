@@ -3,7 +3,10 @@ import LaunchIcon from '@material-ui/icons/Launch'
 import PDFIcon from '@material-ui/icons/PictureAsPdf'
 import './LabContainer.css'
 
-const LabContainer = ({ lab }) => (
+const LabContainer = ({ lab }) => {
+  const isAndroid = /Android/i.test(navigator.userAgent)
+  
+  return (
   <div className='lab'>
 
     {/* {lab.image && (<img
@@ -18,7 +21,7 @@ const LabContainer = ({ lab }) => (
     )} */}
 
     {
-      lab.pdf && (
+      lab.pdf && !isAndroid && (
         <iframe
           src={lab.pdf}
           title={`${lab.name} PDF Preview`}
@@ -54,11 +57,14 @@ const LabContainer = ({ lab }) => (
         aria-label='pdf link'
         className='link link--icon'
         style={{ float: 'left', paddingTop: '1em' }}
+        target={isAndroid ? '_blank' : undefined}
+        rel={isAndroid ? 'noopener noreferrer' : undefined}
       >
        <PDFIcon />
       </a>
     )}
   </div>
-)
+  )
+}
 
 export default LabContainer
