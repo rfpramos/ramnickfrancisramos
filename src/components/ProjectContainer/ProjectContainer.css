@@ -31,3 +31,10 @@
 .project .link--icon {
   margin-left: 0.5em;
 }
+
+.project__type {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--clr-primary);
+  margin-top: 0.5em;
+}

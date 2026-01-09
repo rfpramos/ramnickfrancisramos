@@ -36,6 +36,10 @@ const ProjectContainer = ({ project }) => (
       </ul>
     )}
 
+    {project.type && (
+      <p className='project__type'>{project.type}</p>
+    )}
+
     {project.sourceCode && (
       <a
         href={project.sourceCode}

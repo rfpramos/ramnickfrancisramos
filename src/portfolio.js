@@ -232,6 +232,7 @@ const projects = [
   // if there are no projects, Projects section won't show up
   {
     name: 'BATSeq',
+    type: 'Web Application',
     description:
       'Developed a web application that implements bioinformatics tool such as Basic Local Alignment Search Tool using MERN Stack for the nucleotide sequences under Center for Cave Ecosystems Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave Ecosystems Research.',
     stack: ['MySQL', 'ExpressJS', 'ReactJS', 'NodeJS'],
@@ -251,6 +252,7 @@ const projects = [
     // image: 'brics.png',
 
     name: 'Booking and Reservation for ICS',
+    type: 'Web Application',
     description:
       'Worked for the Frontend Developer Team to create a Room Reservation Management System for the Institute of Computer Science - UPLB using React JS',
     stack: ['React JS', 'JavaScript', 'CSS'],
@@ -259,6 +261,7 @@ const projects = [
   },
   {
     name: 'Tulong Los Banos',
+    type: 'Mobile Application',
     description:
       'Worked on designing the user experience and developing the user interface of a Flutter Mobile Application while working on the Firebase Integration to serve as a donation management system for Los Banos, Laguna',
     stack: ['Flutter', 'Dart', 'Firebase'],
@@ -267,6 +270,7 @@ const projects = [
   },
   {
     name: 'Elbi Food Review',
+    type: 'Database Management System',
     description:
       'Developed a database management system for a Food Review Application in Los Banos, Laguna using MariaDB and Python',
     stack: ['Python', 'MariaDB'],
@@ -274,16 +278,19 @@ const projects = [
     image: 'elbifood.png',
   },
   {
-    navme: 'Official UPLB February Fair App',
+    name: 'Official UPLB February Fair App',
+    type: 'HCI Research and UI/UX Design',
     description:
       'Implemented experimental research and UI/UX design process for pitching a companion application for the UPLB February Fair using Figma',
     stack: ['Figma', 'UI/UX Design'],
     ytLink: 'https://youtu.be/1EgwotWA99c', 
     figmaLink: 'https://www.figma.com/proto/9rdQQ4diXdr152YVSOCihc/CMSC-173%3A-February-Fair-Donation-App?node-id=1-10&starting-point-node-id=1%3A275&t=F7qJpvI0Agxgqv43-1',
     image: 'febfair.png',
+    pdf: `${process.env.PUBLIC_URL}/assets/febfair_app.pdf`,
   },
   {
     name: 'E-mbakan',
+    type: 'Web Application',
     description:
       'Developed an e-commerce website using Material UI through MERN Stack for selling crops and poultry product',
     stack: ['MongoDB', 'ExpressJS', 'ReactJS', 'NodeJS', 'Material UI'],
