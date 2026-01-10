@@ -20,7 +20,7 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Ramnick Francis Ramos',
-  role: 'Information Security and Software Development',
+  role: 'BS Computer Science Fresh Graduate',
   picture: 'images/linux_style_headshot.png',
 
   description:
