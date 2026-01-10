@@ -73,7 +73,7 @@ const Labs = () => {
         alt='SEED Security Labs Logo'
         className='labs__seed-logo'
       />
-      <p>The laboratory prompts for this was provided by <a href='https://seedsecuritylabs.org/' target='_blank' rel='noopener noreferrer'>SEED Security Labs</a> in completion of the CMSC 191: Cybersecurity coursework. SEED Security Labs is a project focused on enhancing cybersecurity education through hands-on laboratory exercises. Visit them at https://seedsecuritylabs.org/.  </p>
+      <p>The laboratory prompts for this was provided by SEED Security Labs adjunct the completion of the CMSC 191: Cybersecurity coursework. SEED Security Labs is an education instiitution that aims to promote literaciy in technical skills on information security through hands-on laboratory exercises. Visit them at <a href='https://seedsecuritylabs.org/' target='_blank' rel='noopener noreferrer'>https://seedsecuritylabs.org/.</a>  </p>
 
       <div className='labs__grid'>
         {labs.map((lab) => (

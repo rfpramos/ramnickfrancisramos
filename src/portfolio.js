@@ -14,14 +14,17 @@ const header = {
   title: 'ramnickfrancisramos.dev',
 }
 
+ /**
+   * @editted Content was already editted.
+   */
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Ramnick Francis Ramos',
-  role: 'BS Computer Science Fresh Graduate',
+  role: 'Information Security and Software Development',
   picture: 'images/linux_style_headshot.png',
 
   description:
-    'A graduate from the Insitute of Computer Science at the University of the Philippines Los Baños. I am an aspiring Information Security Analyst with leveraged experience in Software Development. With a keen interest in creation of cybersecurity reports and analysis of software qualities, I aim to contribute to a cybersecurity team that give importance to both security and ease of usability. ',
+    'A fresh graduate from the Institute of Computer Science of the University of the Philippines Los Baños, I am an aspiring Information Security Analyst and Software Developer. Leveraging from my involvement in both security and quality assurance, I look forward to working for a security team that finds the synergy of both cybersecurity and the quality of service of softwares.',
   resume: `${process.env.PUBLIC_URL}/resume.pdf`,
   social: {
     linkedin: 'https://www.linkedin.com/in/rfpramos/',
@@ -33,6 +36,8 @@ const about = {
 // This will be the main feature of the portfolio
 
 /**
+ * 
+ * 
  * Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 -a----          1/7/2026   7:37 PM        1178861 buffer_overflow.pdf
@@ -79,34 +84,38 @@ Mode                 LastWriteTime         Length Name
 
 
 */
+
+
+ /**
+   * @editted Content was already editted.
+   */
 const labs = [
   
   {
     name: 'Malware Analysis on Surveilance Malware',
     description:
-      'A comprehensive lab report on Malware Analysis, focusing on the techniques and methodologies used to analyze and understand the behavior of a simulated surveillance malware.',
-  
+      'A comprehensive static analysis infographic made for a Windows Executable that was uncovered to be a screenshot-taking surveilance malware.', 
     stack: ['Malware Analysis', 'Static Analysis','Metadata Analysis', 'Cryptanalysis', 'String Analysis', 'Import Analysis'],
     pdf: `${process.env.PUBLIC_URL}/assets/malware_analysis/malware_1.pdf`,
   },
   {
     name: 'Malware Analysis on Lab-simulated Malware',
     description:
-    'A detailed inforgaphic on a analysis made on a malware that was simulated in a lab environment, covering various analysis techniques and findings.',
+    'A detailed inforgaphic malware analysis made for a Windows Executable File, simulated as a non-propagating background malware ',
     stack: ['Malware Analysis',  'Static Analysis',  'Metadata Analysis', 'Cryptanalysis', 'String Analysis', 'Import Analysis'],
     pdf: `${process.env.PUBLIC_URL}/assets/malware_analysis/malware_2.pdf`,
   },
   {
     name: 'Capture The Flag (CTF) Writeup',
     description:
-      'Placed 8th of laboratory section; A comprehensive writeup of a Capture The Flag (CTF) competition, detailing the challenges faced, solutions implemented, and lessons learned during the event.',
+      'Placed 8th of the entire participants of the Capture the Flag; a collection of explainer on a three-day-long Capture the Flag Competition that encompasses skills on Forensics, Web Security, Cryptography, Binary Exploitation, etc.',
     stack: ['CTF', 'Cybersecurity', 'Problem Solving'],
     pdf: `${process.env.PUBLIC_URL}/assets/ctf_writeup/ctf.pdf`,
   },
   {
     name: 'Penetration Testing Report',
     description:
-      'A detailed Penetration Testing Report, outlining the methodologies, findings, and recommendations from a simulated penetration test conducted to assess the security posture of a target system.',
+      'A report made on penetrating a Kali Linux Victim Machine by exploitating the proftpd_telnet_133c_backdoor vulnerability.',
     stack: ['Penetration Testing', 'Metasploit', 'Vulnerability Assessment', 'Security Analysis'],
     pdf: `${process.env.PUBLIC_URL}/assets/pen_test/pentest.pdf`,
   },
@@ -114,63 +123,63 @@ const labs = [
   {
     name: 'Buffer Overflow Exploits',
     description:
-      'A comprehensive lab report on Buffer Overflow Exploits, covering the fundamentals, techniques, and mitigation strategies to enhance cybersecurity defenses.',
+      'A comprehensive laboratory report on exploring system architecture that simulates Buffer Overflow Attack in an Ubuntu 20.04 Virtual Machine.',
     stack: ['C Programming', 'Exploit Development', 'Memory Management'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/buffer_overflow.pdf`,
   },
   {
     name: 'Domain Name System (DNS) Security',
     description: 
-      'An in-depth lab report on DNS Security, exploring vulnerabilities, attack vectors, and best practices to safeguard DNS infrastructure against cyber threats.',
+      'An in-depth laboratory report that exhibits how DNS attacks misdirect users to misleading destinations that are malicious.',
     stack: ['DNS Protocol', 'Network Security', 'Cybersecurity'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/dns_attack.pdf`,
   },
   {
     name: 'Encryption',
     description: 
-      'A detailed lab report on Encryption, discussing various encryption algorithms, their applications, and the role of encryption in protecting sensitive data from unauthorized access.',
+      'An analytical laboratory report that explores the different symmetric key encryption algorithms, their corresponding modes, alphabetic substitutions, and their implications on data confidentiality',
     stack: ['Cryptography', 'Data Security', 'Algorithms'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/encryption.pdf`,
   },
   {
-    name: 'Environment Setuid',
+    name: 'Environment Set-UID',
     description:
-      'A lab report on Environment Setuid, examining the security implications, vulnerabilities, and mitigation techniques associated with setuid programs in Unix-like operating systems.',
+      'A laboratory report made to explore the privilege escalation on adding a malicious script or payload to environemnt variables in a vulerability-simulated Ubuntu 20.04 Virtual Machine',
     stack: ['Unix Security', 'Setuid Programs', 'Vulnerability Analysis'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/environ_setuid.pdf`,
   },
   {
     name: 'Public Key Infrastructure (PKI)',
     description:
-      'A comprehensive lab report on Public Key Infrastructure (PKI), covering the principles, components, and implementation of PKI to ensure secure communication and authentication in digital environments.',
+      'A comprehensive laboratory report that explores how digital environments employ asymmetric encryption for public key infrasturctures for the more secure communication between parties.',
     stack: ['Cryptography', 'Digital Certificates', 'Network Security'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/pki.pdf`,
   },
   {
     name: 'Shellshock Attacks',
     description:
-      'An in-depth lab report on Shellshock Attacks, analyzing the vulnerabilities, attack methods, and defense mechanisms to protect systems from Shellshock exploits.',
+      'An in-depth laboratory report that explores the legacy vulnerability of Shellshock in Bash',
     stack: ['Bash Scripting', 'Vulnerability Analysis', 'Cybersecurity'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/shellshock_attack.pdf`,
   },
   {
     name: 'SQL Injection',
     description:
-      'A detailed lab report on SQL Injection, exploring the techniques, vulnerabilities, and prevention strategies to safeguard databases from SQL injection attacks.',
+      'A detailed laboratory report that shows how the SQL Database of a simulated web-based database management system for payroll could be tampered through injections',
     stack: ['Database Security', 'Web Application Security', 'SQL'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/sql.pdf`,
   },
   {
     name: 'TCP/IP Protocol Suite',
     description:
-      'A lab report on the TCP/IP Protocol Suite, providing insights into the architecture, protocols, and security considerations of the TCP/IP model in modern networking.',
+      'A laboratory report that explores concepts on SYN FLooding Attacks and TCP Session Hijacking using tools such as Wireshark ',
     stack: ['Networking', 'TCP/IP', 'Network Security'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/tcp_ip.pdf`,
   },
   {
     name: 'Cross-Site Scripting (XSS)',
     description:
-      'An in-depth lab report on Cross-Site Scripting (XSS), examining the vulnerabilities, attack techniques, and mitigation strategies to protect web applications from XSS attacks.',
+      'An in-depth laboratory report that exhibits how injection attacks of malicious script are made to a certain networking web application ',
     stack: ['Web Security', 'JavaScript', 'Vulnerability Analysis'],
     pdf: `${process.env.PUBLIC_URL}/assets/labs/xss.pdf`,
   },  
@@ -227,6 +236,10 @@ poultry product"
         </section>
  *  */
 
+
+         /**
+   * @editted Content was already editted.
+   */
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
@@ -234,7 +247,7 @@ const projects = [
     name: 'BATSeq',
     type: 'Web Application',
     description:
-      'Developed a web application that implements bioinformatics tool such as Basic Local Alignment Search Tool using MERN Stack for the nucleotide sequences under Center for Cave Ecosystems Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave Ecosystems Research.',
+      'Worked on the development of a web-based database management system that aims to streamline the data curation process of nucleotide sequences, incoporating several bioinformatics tools, for the Center for Caves Research of the University of the Philippines Los Banos\' Museum of Natural History',
     stack: ['MySQL', 'ExpressJS', 'ReactJS', 'NodeJS'],
     sourceCode: 'https://github.com/rfpramos/batseq_cmsc190_final',
     pdf: `${process.env.PUBLIC_URL}/assets/batseq_paper.pdf`,
@@ -251,10 +264,10 @@ const projects = [
     // livePreview: 'https://github.com',
     // image: 'brics.png',
 
-    name: 'Booking and Reservation for ICS',
+    name: 'Booking and Reservation for ICS (BRICS)',
     type: 'Web Application',
     description:
-      'Worked for the Frontend Developer Team to create a Room Reservation Management System for the Institute of Computer Science - UPLB using React JS',
+      'Worked for the frontend development team in the creation of the Room Reservation Management System for the Institute of Computer Science - UPLB using React JS and Material UI',
     stack: ['React JS', 'JavaScript', 'CSS'],
     livePreview: 'https://brics-alpha.vercel.app/',
     image: 'brics.png',
@@ -263,7 +276,7 @@ const projects = [
     name: 'Tulong Los Banos',
     type: 'Mobile Application',
     description:
-      'Worked on designing the user experience and developing the user interface of a Flutter Mobile Application while working on the Firebase Integration to serve as a donation management system for Los Banos, Laguna',
+      'Worked as a lead on the UI/UX Designing and frontend development of a database management system for donation drives in Los Banos, Laguna ',
     stack: ['Flutter', 'Dart', 'Firebase'],
     // sourceCode: 'https://github.com',
     image: 'tulong.jpg',
@@ -272,7 +285,7 @@ const projects = [
     name: 'Elbi Food Review',
     type: 'Database Management System',
     description:
-      'Developed a database management system for a Food Review Application in Los Banos, Laguna using MariaDB and Python',
+      'As a team lead, worked on the development of a database management system for a food hub reviewing application using MariaDB and Python',
     stack: ['Python', 'MariaDB'],
     sourceCode: 'https://github.com/rfpramos/elbi-food-review',
     image: 'elbifood.png',
@@ -281,7 +294,7 @@ const projects = [
     name: 'Official UPLB February Fair App',
     type: 'HCI Research and UI/UX Design',
     description:
-      'Implemented experimental research and UI/UX design process for pitching a companion application for the UPLB February Fair using Figma',
+      'Ranked 1st in the Laboratory Section for the culminating pitching competition activity, implemented experimental research design in making a companion mobile application for the annual protest music festival UPLB February Fair using Figma',
     stack: ['Figma', 'UI/UX Design'],
     ytLink: 'https://youtu.be/1EgwotWA99c', 
     figmaLink: 'https://www.figma.com/proto/9rdQQ4diXdr152YVSOCihc/CMSC-173%3A-February-Fair-Donation-App?node-id=1-10&starting-point-node-id=1%3A275&t=F7qJpvI0Agxgqv43-1',
@@ -292,7 +305,7 @@ const projects = [
     name: 'E-mbakan',
     type: 'Web Application',
     description:
-      'Developed an e-commerce website using Material UI through MERN Stack for selling crops and poultry product',
+      'Developed an e-commerce site for agricultural products using MERN Stack',
     stack: ['MongoDB', 'ExpressJS', 'ReactJS', 'NodeJS', 'Material UI'],
     ytLink: 'https://youtu.be/MntXkmDEjrE',
     sourceCode: 'https://github.com/CMSC100-1S2324/project-group-3',
@@ -300,12 +313,15 @@ const projects = [
   },
 ]
 
+
+ /**
+   * @editted Content was already editted.
+   */
 const cybersecuritySkills = [
   // cybersecurity skills can be added or removed
   // if there are no skills, Skills section won't show up
   'Network Security',
   'Malware Analysis',
-  'Ethical Hacking',
   'Penetration Testing',
   'Vulnerability Assessment',
   'Cryptography',
@@ -321,6 +337,10 @@ const cybersecuritySkills = [
 ]
   
 
+
+ /**
+   * @editted Content was already editted.
+   */
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
@@ -347,6 +367,10 @@ const skills = [
 ]
 
 
+
+ /**
+   * @editted Content was already editted.
+   */
 const education = [
   {
     institution: 'University of the Philippines Los Baños',
@@ -354,7 +378,7 @@ const education = [
     graduationDate: 'December 2025',
     gwa: '1.4431',
     details:
-      'Took elective courses in Information Security and Bionformatics.',
+      'Took elective courses in Cyberscurity and Bionformatics.',
     awards: [
       'Honorific Standing: Magna cum Laude',
       'University/College Scholar',
@@ -376,7 +400,7 @@ const education = [
     degree: 'High School Diploma',
     graduationDate: 'May 2021',
     details:
-      'Specialized in Science, Technology, Engineering, and Mathematics (STEM) strand with electives on Physics, Computer Science, and Engineering.',
+      'Took specialized classes on Science, Technology, Engineering, and Mathematics (STEM) and advanced Physics and Computer Science Electives',
     gwa: '1.42',
     awards: [
       'Graduated with High Honors',
@@ -410,13 +434,19 @@ Non-Commissioned Cadet Officer November 2021 - May 2022
 ● Held a leadership position as the Acting G6, Communications, and Information Technology Officer
 ● Led the team managing the official social media page of the UPLB ROTC
  */
+
+
+
+ /**
+   * @editted Content was already editted.
+   */
 const affiliations = [
   {
     institution: 'Alliance of Computer Science Students (ACSS) - UPLB',
     position: 'Logistics and Public Relations Officer',
     duration: 'December 2021 - Present',
     details:
-      'Helps in managing partnerships with external organizations and partner university organizations. Aids in the management of the organization’s inventory.',
+    'Hosted events for external activities such as seminars and workshops; Works primarily in the management of the physical assets of the organization through inventory curating;',
   },
   {
     institution: 'UPLB ROTC - Corps of Cadets',
@@ -433,14 +463,14 @@ const experiences = [
     position: 'Software Development Intern',
     duration: 'June 2024 - August 2024',
     details:
-      'Developed a web application using MERN Stack for the projects under Center for Cave Ecosystems Research (CAVES) – The Museum of Natural History NICER Program on Center for Cave Ecosystems Research.',
+      'Collaborated with a team of six developers in making MERN-stacked web development projects in making dashboards for datasets gathered on 120+ biological profilings made by microbiology researchers from the Museum of Natural History of the University of the Philippines Los Banos',
   },
   {
     institution: 'KUMU, INC.',
     position: 'Software Quality Assurance Intern',
     duration: 'August 2023',
     details:
-      'Utilized Jira to report bugs and issues in a mobile live-streaming application. Worked with other technology interns to ensure the functionality of new features. Experienced leading intern team on smoke testing for product deployment.',
+      'Utilized Jira for reporting bugs and collaborating with developers on improving a live-streaming application. Conducted smoke testing sprints as an intern lead. '
   },
 ] 
 
