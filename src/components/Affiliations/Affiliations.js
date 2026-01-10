@@ -31,7 +31,19 @@ const Affiliations = () =>
         <div key={uniqid()} className='affiliations__item'>
           <h3 className='affiliations__institution'>{aff.institution}</h3>
           <p className='affiliations__position'>{aff.position} &mdash; {aff.duration}</p>
-          <p className='affiliations__details'>{aff.details}</p>
+
+
+{/* 
+           details:[
+      'Hosted events for external activities such as seminars and workshops',
+      'Works primarily in the management of the physical assets of the organization through inventory curating.',
+      'Worked on managing partnerships with external organizations' */}
+          <ul className='affiliations__details'>
+            {aff.details.map((detail) => (
+              <li key={uniqid()}>{detail}</li>
+            ))}
+          </ul>
+
         </div>
       ))}
     </section>

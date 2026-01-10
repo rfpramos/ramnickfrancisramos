@@ -31,7 +31,11 @@ const Experience = () =>
         <div key={uniqid()} className='experience__item'>
           <h3 className='experience__institution'>{exp.institution}</h3>
           <p className='experience__position'>{exp.position} &mdash; {exp.duration}</p>
-          <p className='experience__details'>{exp.details}</p>
+          <ul className='experience__details'>
+            {exp.details.map((detail) => (
+              <li key={uniqid()}>{detail}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </section>
