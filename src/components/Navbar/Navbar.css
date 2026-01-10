@@ -98,7 +98,7 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    background-color: #23283e; /* dark panel for mobile menu */
+    background-color: #3c3c3c; /* dark panel for mobile menu */
     z-index: 2;
     gap: 2em;
   }
