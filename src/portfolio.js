@@ -369,6 +369,11 @@ const skills = [
   'Flutter',
   'Dart',
   'Figma',
+  'COBOL', 
+  'Prolog', 
+  'SCHEME', 
+  'Erlang', 
+  'Rust'
 ]
 
 

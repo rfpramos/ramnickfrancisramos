@@ -31,7 +31,8 @@
     "lint": "eslint .",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "gen:link": "node scripts/gen_secure_link.js"
   },
   "browserslist": {
     "production": [
