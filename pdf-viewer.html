@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Match site look (dark terminal purple) -->
+    <meta name="theme-color" content="#300a24" />
+    <link rel="icon" type="image/png" href="./images/tab_logo.png" />
+    <title>Document</title>
+    <style>
+      :root {
+        --bg: #300a24;
+        --bg-alt: #3b0f2e;
+        --fg: #e6f1d8;
+        --fg-alt: #b9cf9a;
+        --accent: #76ad30;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        height: 100%;
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        background: var(--bg-alt);
+        border-bottom: 1px solid #5a1a42;
+      }
+      header .title { color: var(--accent); font-size: 14px; }
+      header a { color: var(--fg-alt); text-decoration: none; }
+      header a:hover { text-decoration: underline; }
+      .viewer {
+        position: fixed;
+        inset: 48px 0 0 0; /* below header */
+      }
+      iframe { width: 100%; height: 100%; border: 0; background: #fff; }
+      .error { padding: 24px; }
+    </style>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const src = params.get('src');
+        const esrc = params.get('esrc'); // encrypted src token (base64url of salt+iv+ciphertext)
+        const title = params.get('title');
+        if (title) document.title = title;
+        // Allow optional color overrides via query (e.g., &bg=%23300a24)
+        const setCssVar = (k, q) => {
+          const v = params.get(q);
+          if (v) document.documentElement.style.setProperty(k, v);
+        };
+        setCssVar('--bg', 'bg');
+        setCssVar('--bg-alt', 'bgAlt');
+        setCssVar('--fg', 'fg');
+        setCssVar('--fg-alt', 'fgAlt');
+        setCssVar('--accent', 'accent');
+
+        // base64url helpers
+        const b64urlToBytes = (str) => {
+          str = str.replace(/-/g, '+').replace(/_/g, '/');
+          const pad = str.length % 4;
+          if (pad) str += '='.repeat(4 - pad);
+          const raw = atob(str);
+          const bytes = new Uint8Array(raw.length);
+          for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);
+          return bytes;
+        };
+
+        const bytesToStr = (bytes) => new TextDecoder().decode(bytes);
+
+        async function decryptPath(token, passphrase) {
+          const data = b64urlToBytes(token);
+          if (data.length < 28) throw new Error('Bad token');
+          const salt = data.slice(0, 16);
+          const iv = data.slice(16, 28);
+          const ct = data.slice(28);
+          const enc = new TextEncoder();
+          const keyMaterial = await crypto.subtle.importKey(
+            'raw', enc.encode(passphrase), 'PBKDF2', false, ['deriveBits', 'deriveKey']
+          );
+          const key = await crypto.subtle.deriveKey(
+            { name: 'PBKDF2', salt, iterations: 200000, hash: 'SHA-256' },
+            keyMaterial,
+            { name: 'AES-GCM', length: 256 },
+            false,
+            ['decrypt']
+          );
+          const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+          return bytesToStr(new Uint8Array(plain));
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+          const titleEl = document.getElementById('js-title');
+          const frame = document.getElementById('js-frame');
+          const error = document.getElementById('js-error');
+          const form = document.getElementById('js-form');
+          const passInput = document.getElementById('js-pass');
+          const hint = document.getElementById('js-hint');
+
+          if (title && titleEl) titleEl.textContent = title;
+
+          // Direct src flow remains
+          if (src) {
+            try {
+              const url = new URL(src, window.location.origin).toString();
+              frame.src = url;
+            } catch (e) { error.hidden = false; }
+            return;
+          }
+
+          // Encrypted flow
+          if (esrc) {
+            form.hidden = false;
+            hint.hidden = false;
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              error.hidden = true;
+              try {
+                const path = await decryptPath(esrc, passInput.value);
+                const url = new URL(path, window.location.origin).toString();
+                frame.src = url;
+                // If no title provided, set to basename of path
+                if (!title) {
+                  const base = path.split('/').pop();
+                  document.title = base;
+                  if (titleEl) titleEl.textContent = base;
+                }
+                form.hidden = true;
+                hint.hidden = true;
+              } catch (err) {
+                error.hidden = false;
+              }
+            });
+            return;
+          }
+
+          // Neither provided
+          error.hidden = false;
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="title">$ <span id="js-title">Document</span></div>
+      <nav>
+        <a href="/">goto portfolio</a>
+      </nav>
+    </header>
+    <main class="viewer">
+      <iframe id="js-frame" title="PDF Viewer"></iframe>
+      <form id="js-form" hidden style="position:absolute; top:56px; left:12px; right:12px; background:var(--bg-alt); padding:10px; border:1px solid #5a1a42; border-radius:6px;">
+        <label for="js-pass" style="color:var(--fg-alt)">Enter passphrase to unlock link:</label>
+        <input id="js-pass" type="password" style="margin-left:8px; background:var(--bg); color:var(--fg); border:1px solid #5a1a42; padding:4px 6px;" />
+        <button type="submit" style="margin-left:8px; background:transparent; color:var(--accent); border:1px solid var(--accent); padding:4px 10px;">Decrypt</button>
+      </form>
+      <div id="js-hint" hidden class="error" style="position:absolute; top:108px; left:12px; right:12px;">
+        <p>Encrypted example: /pdf-viewer.html?esrc=<em>token</em>&title=Malware%20Analysis</p>
+      </div>
+      <div id="js-error" class="error" hidden>
+        <p>Missing or invalid parameters.</p>
+        <p>Example: /pdf-viewer.html?src=/assets/malware_analysis/malware_1.pdf&title=Malware%20Analysis</p>
+      </div>
+    </main>
+  </body>
+  </html>
