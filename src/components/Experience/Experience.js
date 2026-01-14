@@ -26,7 +26,7 @@ import { experiences } from '../../portfolio';
 const Experience = () =>
   (
     <section className='section experience' id='experience'>
-      <h2 className='section__title'>Experience</h2>
+      <h2 className='section__title'>Experiences</h2>
       {experiences.map((exp) => (
         <div key={uniqid()} className='experience__item'>
           <h3 className='experience__institution'>{exp.institution}</h3>

@@ -49,7 +49,7 @@ const Navbar = () => {
         {experiences.length > 0 && (
           <li className='nav__list-item'>
             <a href='#experience' onClick={toggleNavList} className='link link--nav'>
-              Work Experiences
+              Experience
             </a>
           </li>
         )}
