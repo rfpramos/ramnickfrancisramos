@@ -8,6 +8,7 @@ import {
   projects,
   skills,
   contact,
+  affiliations,
   cybersecuritySkills,
   labs,
   education,
@@ -52,6 +53,13 @@ const Navbar = () => {
             </a>
           </li>
         )}
+        {affiliations.length > 0 && (
+          <li className='nav__list-item'>
+            <a href='#affiliations' onClick={toggleNavList} className='link link--nav'>
+              Affiliations
+            </a>
+          </li>
+        )}  
 
         {labs.length > 0 && (
           <li className='nav__list-item'>
