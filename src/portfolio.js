@@ -453,7 +453,7 @@ Non-Commissioned Cadet Officer November 2021 - May 2022
 const affiliations = [
   {
     institution: 'Alliance of Computer Science Students (ACSS) - UPLB',
-    position: 'Logistics and Public Relations Officer',
+    position: 'Logistics and Public Relations Developer',
     duration: 'December 2021 - Present',
     details:[
       'Hosted events for external activities such as seminars and workshops',
