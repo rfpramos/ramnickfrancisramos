@@ -86,7 +86,7 @@
 }
 
 /* ---------- Responsive Mobile ---------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav__controls .nav__title {
     display: none; /* hide terminal title on mobile */
   }
@@ -108,7 +108,7 @@
     z-index: 3;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav__list--active {
     display: flex;
   }
