@@ -24,7 +24,7 @@ const about = {
   picture: 'images/linux_style_headshot.png',
 
   description:
-    'A recent graduate from the Institute of Computer Science of the University of the Philippines Los Baños, I am an aspiring Software Developer and Information Security Analyst. Leveraging my involvements in both security and quality assurance, I look forward to working in a security team that finds the synergy between the importance of cybersecurity and developing secure software that is reliable and secure.',
+    'A recent graduate from the Institute of Computer Science of the University of the Philippines Los Baños, I am an aspiring Software Developer and Information Security Analyst. Leveraging my involvements in both security and quality assurance, I look forward to working in a company that finds the synergy between the importance of cybersecurity and developing secure software that is reliable and secure.',
   resume: `${process.env.PUBLIC_URL}/resume.pdf`,
   social: {
     linkedin: 'https://www.linkedin.com/in/rfpramos/',
