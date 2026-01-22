@@ -500,7 +500,7 @@ const experiences = [
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'ramnickfrancisamos@gmail.com',
+  email: 'ramnickfrancisramos@gmail.com',
   phone: '+63 960 277 1720',
 
 }
