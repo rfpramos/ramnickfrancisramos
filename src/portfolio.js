@@ -386,7 +386,7 @@ const education = [
     institution: 'University of the Philippines Los Baños',
     degree: 'Bachelor of Science in Computer Science',
     graduationDate: 'December 2025',
-    gwa: '1.4431',
+    gwa: '1.4431/1.00',
     details:
       'Took elective courses in Cybersecurity and Bioinformatics.',
     awards: [
@@ -411,7 +411,7 @@ const education = [
     graduationDate: 'May 2021',
     details:
       'Took specialized classes on Science, Technology, Engineering, and Mathematics (STEM) with advanced Physics and Computer Science Electives.',
-    gwa: '1.42',
+    gwa: '1.42/1.00',
     awards: [
       'Graduated with High Honors',
     ]
