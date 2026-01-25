@@ -14,7 +14,7 @@ const Contact = () => {
       
       <form
 
-        action="https://formspree.io/f/mgovgrrd"
+        action="https://formspree.io/f/mgovgrrd" 
         method="POST"
         className='contact__form'
       >
